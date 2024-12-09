@@ -1,16 +1,15 @@
 import { mapRawCocktailData } from "../utilities.js";
 import { fetchRandomCocktail } from "../services/apiService.js";
 import { displayRandomCocktail } from "../utils/domUtils.js";
-const randomButton = document.querySelector(".generate-cocktail-btn");
 
+
+
+// Fetches a new random cocktail from the api and then saves it into a mapable variable in order to display it in the dom
 export const generateNewDrink = () => {
-  randomButton.addEventListener("click", () => {
-    fetchRandomCocktail().then((res) => {
-      const cocktail = res.drinks ? res.drinks[0] : res;
-      const mappedCocktail = mapRawCocktailData(cocktail);
-      displayRandomCocktail(mappedCocktail);
-      console.log("clicked");
-      console.log(cocktail);
-    });
+  fetchRandomCocktail().then((res) => {
+    const cocktail = res.drinks ? res.drinks[0] : res;
+    const mappedCocktail = mapRawCocktailData(cocktail);
+    displayRandomCocktail(mappedCocktail);
+    console.log(cocktail);
   });
 };

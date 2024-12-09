@@ -8,14 +8,16 @@
   </head>
   <body>
     <header class="header">
-      <h1 class="logo-text">Shaken & Stirred</h1>
+      <div class="logo-wrapper">
+        <img src="./assets/imgs/logo-img.png" alt="" />
+      </div>
       <nav class="nav">
         <ul class="nav-list">
           <li class="nav-item">
             <a href="index.html" class="nav-link">Home</a>
           </li>
           <li class="nav-item">
-            <a href="#search-container" class="nav-link">Search</a>
+            <a href="#searchContainer" class="nav-link">Search</a>
           </li>
           <!-- <li class="nav-item">
             <a href="contact.html" class="nav-link">Contact</a>
@@ -39,17 +41,21 @@
         <div class="random-cocktail-container">
           <h2>Random cocktail of the day</h2>
           <div class="random-cocktail-display-container"></div>
-          <div class="button-container">
-            <button type="button" class="generate-cocktail-btn">
-              Pour me a new one
-            </button>
-            <button type="button" class="show-details-btn">
-              Show more details
-            </button>
-          </div>
+          
+        </div>
+
+        <div class="detail-module">
+
         </div>
       </section>
     </main>
+
+    <section id="searchContainer" class="search-container">
+      
+    </section>
     <script src="index.js" type="module"></script>
   </body>
 </html>
+
+
+
