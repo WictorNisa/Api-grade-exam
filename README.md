@@ -150,4 +150,4 @@ De kommande två veckorna så är jag schemalagt på extra handledningspass för
 
 `Övrigt`
 
-Förhoppningsvis kommer ni att tycka att uppgiften är riktigt rolig att utföra. Den kommer vara utmanande men den är också betygsgrundande så ni ska verkligen få en chans här att visa vad ni har lärt er. Lägg ner den tiden som krävs och kämpa på! Arbeta metodiskt och gör en sak, eller "sida" åt gången. Jag finns tillgänglig under de dagarna som jag är schemalagt så ni får gärna bolla med mig om ni vill. Bolla också med varandra men var försiktiga och se till att ni alla skapar er egna applikation med er egna kod. 
+Förhoppningsvis kommer ni att tycka att uppgiften är riktigt rolig att utföra. Den kommer vara utmanande men den är också betygsgrundande så ni ska verkligen få en chans här att visa vad ni har lärt er. Lägg ner den tiden som krävs och kämpa på! Arbeta metodiskt och gör en sak, eller "sida" åt gången. Jag finns tillgänglig under de dagarna som jag är schemalagt så ni får gärna bolla med mig om ni vill. Bolla också med varandra men var försiktiga och se till att ni alla skapar er egna applikation med er egna kod.
