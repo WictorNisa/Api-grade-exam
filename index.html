@@ -3,59 +3,81 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=favorite"
+    />
     <title>Exam - Wictor Niså</title>
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <header class="header">
-      <div class="logo-wrapper">
-        <img src="./assets/imgs/logo-img.png" alt="" />
-      </div>
       <nav class="nav">
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a href="index.html" class="nav-link">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="#searchContainer" class="nav-link">Search</a>
-          </li>
-          <!-- <li class="nav-item">
-            <a href="contact.html" class="nav-link">Contact</a>
-          </li> -->
-        </ul>
+        <div class="nav-items">
+          <h1>shaken & stirred</h1>
+          <span class="link" id="start-link">Start</span>
+          <span class="link" id="search-link">Search</span>
+          <span class="link" id="favourites-link">My Favourites</span>
+        </div>
       </nav>
     </header>
     <main class="main-container">
-      <section class="hero-container">
+      <section class="open" id="start-page">
         <div class="hero-text">
-          <h1>Welcome to shaken & stirred</h1>
+          <h1>shaken</h1>
+          <h2>& stirred</h2>
           <p>
-            A cocktail library where you can find your favourite cocktails and
-            browse between hundres of cocktail recipes
+            Your ultimate cocktail library! Explore a world of flavors, discover
+            your new favorite drink, and browse through hundreds of creative
+            cocktail recipes.
           </p>
-          <button type="button" class="CTA-btn">
-            <a href="#search-container">Find your favourite!</a>
-          </button>
         </div>
 
         <div class="random-cocktail-container">
-          <h2>Random cocktail of the day</h2>
           <div class="random-cocktail-display-container"></div>
-          
         </div>
+      </section>
 
-        <div class="detail-module">
+      <section class="detail-module" id="details-page"></section>
 
+      <!-- <div class="loader"></div> -->
+
+      <section id="search-page" class="search-container">
+        <div class="search-bar">
+          <h2>Search for a cocktail</h2>
+          <form class="search-form">
+            <input
+              type="text"
+              class="search-input"
+              placeholder="Search for a cocktail"
+            />
+            <label for="category"> Category </label>
+            <select name="category" id="category">
+              <option value="Cocktail">Cocktail</option>
+              <option value="Cocktail">Cocktail</option>
+              <option value="Cocktail">Cocktail</option>
+              <option value="Cocktail">Cocktail</option>
+            </select>
+            <button type="submit" class="search-btn">Search</button>
+          </form>
         </div>
+        <div class="search-results-container">
+          <div class="result-container"></div>
+        </div>
+      </section>
+
+      <section id="favo-page" class="favourite-container" >
+        <h2>My Favourites</h2>
+        <div class="favourite-cocktails-container"></div>
       </section>
     </main>
 
-    <section id="searchContainer" class="search-container">
-      
-    </section>
     <script src="index.js" type="module"></script>
   </body>
 </html>
-
-
-

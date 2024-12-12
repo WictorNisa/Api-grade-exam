@@ -1,9 +1,150 @@
+/* Main search page container */
 .search-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--black);
+  position: relative;
+}
+
+/* Search bar styling */
+.search-bar {
+  background-color: var(--gold-dark);
+  width: 100%;
+  height: 30%; /* Adjust as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky; /* Sticks the bar at the top */
+  top: 0;
+  z-index: 10;
+}
+
+/* Search results container */
+.search-results-container {
+  
+  width: 100%;
+  display: flex;
+  overflow-y: auto; /* Enables scrolling when items overflow */
+  padding: 1rem;
+}
+
+.result-container{
+  margin: auto;
+  padding: 2rem;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Individual card styling */
+.result-card {
+  position: relative;
+  background-color: transparent;
+  border: 1px solid var(--soft-gold);
+  height: 40vh;
+  width: 20vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
-  background-color: blue;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Full-cover image inside card */
+.result-image-wrapper {
+  position: absolute; /* Makes the image span the whole card */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.result-image-wrapper img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; /* Ensures the image covers the entire div */
+  z-index: 1;
+}
+
+/* Overlay effect for the card image */
+.result-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Subtle dark overlay */
+  z-index: 2;
+  transition: all 0.3s ease-in-out;
+}
+
+.result-card:hover::before {
+  background: rgba(0, 0, 0, 0.6); /* Darker overlay on hover */
+}
+
+/* Text on top of the image */
+.result-card h2 {
+  position: relative;
+  z-index: 3;
+  font-size: 1.5vw;
+  font-family: "Cambridge";
+  text-align: center;
+  letter-spacing: 5px;
+  color: var(--soft-gold);
+  margin-bottom: 10px;
+}
+
+.result-card p {
+  position: relative;
+  z-index: 3;
+  font-size: 1.2vw;
+  font-family: "Cambridge";
+  text-align: center;
+  color: var(--soft-gold);
+  margin-top: 5px;
+}
+
+/* Button on top of the image */
+.result-card button {
+  position: relative;
+  z-index: 3;
+  font-family: "Cambridge";
+  border: 1px solid var(--soft-gold);
+  border-radius: 5px;
+  background-color: transparent;
+  color: var(--soft-gold);
+  font-size: 1vw;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.result-card button:hover {
+  background-color: var(--gold-dark);
+  color: var(--black);
+}
+
+/* Smooth scrolling */
+.search-results-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.search-results-container::-webkit-scrollbar-thumb {
+  background-color: var(--soft-gold);
+  border-radius: 5px;
+}
+
+.search-results-container::-webkit-scrollbar-track {
+  background-color: var(--black);
 }

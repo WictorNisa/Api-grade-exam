@@ -1,0 +1,29 @@
+.favourite-active {
+  color: #ff0000;
+  background-color: #ff0000;
+}
+
+.favourite-container {
+margin: auto;
+  padding: 2rem;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.favourite-cocktails-container {
+  margin: auto;
+  padding: 2rem;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}

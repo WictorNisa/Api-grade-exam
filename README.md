@@ -93,7 +93,7 @@ Med det sagt så kommer jag ändå att kolla in er kod för att bedöma kvaliten
 
   - Kategori
   - Ingredient
-  - Glasstyp
+  - Glastyp
 
 - Sökformuläret ska innehålla relevant validering.
 
