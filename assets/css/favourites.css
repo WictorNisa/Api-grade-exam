@@ -1,10 +1,32 @@
+#favourite-button {
+  font-family: "Playfair Display", serif;
+  border: 1px solid var(--soft-gold);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  font-size: 1.2vw;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  color: var(--soft-gold);
+  cursor: pointer;
+  z-index: 2;
+  transition: 0.5s ease-in-out;
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+}
+
+#favourite-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .favourite-active {
   color: #ff0000;
-  background-color: #ff0000;
 }
 
 .favourite-container {
-margin: auto;
+  margin: auto;
   padding: 2rem;
   height: 100vh;
   width: 100%;
@@ -12,7 +34,7 @@ margin: auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+  background-color: var(--black);
 }
 
 .favourite-cocktails-container {
@@ -26,4 +48,5 @@ margin: auto;
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
+  background-color: var(--black);
 }

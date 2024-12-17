@@ -35,11 +35,27 @@ export const fetchCocktailDetails = async (cocktailId) => {
   }
 };
 
-export const fetchSearchedCocktail = async (searchInput) => {
+export const fetchSearchedCocktail = async (searchValueQuery, searchType) => {
+  let apiUrl;
+  switch (searchType) {
+    case "name":
+      apiUrl = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchValueQuery}`;
+      break;
+    case "ingredient":
+      apiUrl = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${searchValueQuery}`;
+      break;
+    case "category":
+      apiUrl = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${searchValueQuery}`;
+      break;
+    case "glass":
+      apiUrl = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?g=${searchValueQuery}`;
+      break;
+    default:
+      throw new Error("Inavlid Search type");
+  }
+
   try {
-    const res = await fetch(
-      `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchInput}`
-    );
+    const res = await fetch(apiUrl);
     if (!res.ok) {
       throw new Error(`HTTP Error! Status: ${res.status}`);
     }

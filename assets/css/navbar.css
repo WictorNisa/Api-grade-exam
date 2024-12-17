@@ -15,24 +15,33 @@
 
 .nav {
   height: 100%;
-  width: 50%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
 }
 
-.nav span{
-  font-family: 'Cambridge';
+.nav span {
+  font-family: "Cambridge";
   font-size: 1.5rem;
   letter-spacing: 3px;
   margin: 1rem;
   cursor: pointer;
   color: var(--gold-light);
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
-.nav span:hover{
+.nav h1 {
+  font-family: "Cambridge";
+  font-size: 2rem;
+  letter-spacing: 10px;
+  margin: 1rem;
+  color: var(--gold-light);
+ 
+}
+
+.nav span:hover {
   color: var(--cream);
 }
 
@@ -50,18 +59,18 @@
   display: flex;
 }
 
-
-.nav-items{
-  width: 50vw;
+.nav-items {
+  width: 50%;
   height: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  margin: auto 0 auto auto;
 }
 
-.nav-items h1{
-  font-family: 'Cambridge';
+.nav-items h1 {
+  font-family: "Cambridge";
   font-size: 3rem;
   font-weight: 400;
-  color: var( --gold-dark);
+  color: var(--gold-dark);
 }

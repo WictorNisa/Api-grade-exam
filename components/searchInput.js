@@ -1,34 +1,32 @@
+export let allResults = [];
+export const state = {
+  currentPage: 0,
+}
+export const resultsPerPage = 10;
+
+
 import { fetchSearchedCocktail } from "../services/apiService.js";
-import { mapRawCocktailData } from "../utilities.js";
-import { displaySearchedCocktail } from "../utils/domUtils.js";
+import { displayPage, createPaginationControls } from "../utils/domUtils.js";
 
-const searchForm = document.querySelector(".search-form");
+export const handleCocktailSearch = (searchValueQuery, searchType) => {
+  const searchResultsContainer = document.querySelector(".result-container");
 
-// Function to display the search results
-searchForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  handleCocktailSearch();
-});
-
-const handleCocktailSearch = () => {
-  let searchInput = document.querySelector(".search-input").value;
-  const searchResultsContainer = document.querySelector(
-    ".result-container"
-  );
-  const formattedSearchInput = searchInput.toLowerCase();
-  if (formattedSearchInput === "") {
+  if (searchValueQuery === "") {
     alert("Enter a value");
-  } else {
-    searchResultsContainer.innerHTML = "";
-    fetchSearchedCocktail(formattedSearchInput).then((inputData) => {
-      console.log(inputData);
-      const inputCocktail = inputData.drinks ? inputData.drinks : inputData;
-
-      inputCocktail.map((cocktail) => {
-        const mappedInputCocktail = mapRawCocktailData(cocktail);
-        displaySearchedCocktail(mappedInputCocktail);
-      });
-    });
-    console.log(`Form submitted, value: ${formattedSearchInput}`);
+    return;
   }
+
+  searchResultsContainer.innerHTML = "";
+
+  fetchSearchedCocktail(searchValueQuery, searchType)
+    .then((inputData) => {
+      allResults.length = 0; // Reset the array
+      allResults.push(...(inputData.drinks ? inputData.drinks : []));
+      state.currentPage = 0; // Access currentPage from state
+      displayPage(state.currentPage);
+      createPaginationControls();
+    })
+    .catch((error) => {
+      console.error(`An error occurred while fetching data: ${error.message}`);
+    });
 };

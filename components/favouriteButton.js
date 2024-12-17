@@ -1,3 +1,5 @@
+import { displayFavourites } from "../utils/domUtils.js";
+
 export const setAsFavourite = (favouriteIcon, cocktailId) => {
   //Retrive existing favourites from local storage
   let favouriteObj = localStorage.getItem("favouritesArr");
@@ -24,4 +26,6 @@ export const setAsFavourite = (favouriteIcon, cocktailId) => {
   //Save the updated array to local storage
   localStorage.setItem("favouritesArr", JSON.stringify(favouriteArr));
   console.log("Updated favourites:", favouriteArr);
+  displayFavourites(favouriteArr);
+
 };

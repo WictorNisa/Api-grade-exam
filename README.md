@@ -138,7 +138,7 @@ De kommande två veckorna så är jag schemalagt på extra handledningspass för
 - Måndag 9 dec - Handledning på distans. 09-16.
 - Tisdag 10 dec - Handledning & genomgång om det behövs. På plats. 09-16
 - Onsdag 11 dec - Handledning på distans. 09-16.
-- Torsdag 12 dec - Handledning & genomgång om det behövs. På plats. 09-16
+- Torsdag 12 dec - Handledning & genomgång om det behövs. På plats. 09-16 
 
 #### Vecka 51
 

@@ -19,8 +19,8 @@
   <body>
     <header class="header">
       <nav class="nav">
+        <h1>shaken & stirred</h1>
         <div class="nav-items">
-          <h1>shaken & stirred</h1>
           <span class="link" id="start-link">Start</span>
           <span class="link" id="search-link">Search</span>
           <span class="link" id="favourites-link">My Favourites</span>
@@ -50,29 +50,56 @@
 
       <section id="search-page" class="search-container">
         <div class="search-bar">
-          <h2>Search for a cocktail</h2>
+          <!-- <h2>Search for a cocktail</h2> -->
           <form class="search-form">
-            <input
-              type="text"
-              class="search-input"
-              placeholder="Search for a cocktail"
-            />
-            <label for="category"> Category </label>
-            <select name="category" id="category">
-              <option value="Cocktail">Cocktail</option>
-              <option value="Cocktail">Cocktail</option>
-              <option value="Cocktail">Cocktail</option>
-              <option value="Cocktail">Cocktail</option>
-            </select>
-            <button type="submit" class="search-btn">Search</button>
+            <label>
+              <input
+                type="radio"
+                name="filter"
+                value="name"
+                class="name-radio-button"
+              />
+              Name
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="filter"
+                value="category"
+                class="category-radio-button"
+              />
+              Category
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="filter"
+                value="ingredient"
+                class="ingredient-radio-button"
+              />
+              Ingredient
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="filter"
+                value="glass"
+                class="glass-radio-button"
+              />
+              Glass Type
+            </label>
+            <div class="search-alternatives-container"></div>
           </form>
         </div>
         <div class="search-results-container">
           <div class="result-container"></div>
         </div>
+        <div class="pagination-container">
+          
+        </div>
       </section>
 
-      <section id="favo-page" class="favourite-container" >
+      <section id="favo-page" class="favourite-container">
         <h2>My Favourites</h2>
         <div class="favourite-cocktails-container"></div>
       </section>

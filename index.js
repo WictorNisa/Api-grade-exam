@@ -1,6 +1,7 @@
 import { mapRawCocktailData } from "./utilities.js";
 import { fetchRandomCocktail } from "../services/apiService.js";
 import { displayRandomCocktail, displayFavourites } from "./utils/domUtils.js";
+import { handleRadioChange } from "./components/radioButtons.js";
 import "./components/randomButton.js";
 import "./components/searchInput.js";
 
@@ -9,7 +10,7 @@ const startPage = document.querySelector("#start-page");
 const detailsPage = document.querySelector("#details-page");
 const searchPage = document.querySelector("#search-page");
 const favouritesPage = document.querySelector("#favo-page");
-console.log(favouritesPage);
+
 navbar.addEventListener("click", handleOnNavbarClick);
 
 function handleOnNavbarClick(e) {
@@ -50,6 +51,7 @@ fetchRandomCocktail().then((response) => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  handleRadioChange();
   const favouriteObj = localStorage.getItem("favouritesArr");
   const favouriteObjParsed = JSON.parse(favouriteObj);
   if (!Array.isArray(favouriteObjParsed)) {

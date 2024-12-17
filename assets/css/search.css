@@ -8,29 +8,76 @@
   position: relative;
 }
 
+form {
+  height: auto;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.search-btn {
+  font-family: "Cambridge";
+  border: 1px solid var(--soft-gold);
+  border-radius: 5px;
+  background-color: var(--black);
+  color: var(--soft-gold);
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-btn:hover {
+  background-color: var(--gold-dark);
+  color: var(--black);
+}
+
+.search-input {
+  font-family: "playfair display";
+  border-bottom: 1px solid var(--soft-gold);
+  outline: none;
+  border-radius: 5px;
+  background-color: var(--black);
+  color: var(--soft-gold);
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+}
+
 /* Search bar styling */
 .search-bar {
-  background-color: var(--gold-dark);
+  background-color: var(--black);
   width: 100%;
-  height: 30%; /* Adjust as needed */
+  height: 20vh; /* Adjust as needed */
+  margin-top: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: sticky; /* Sticks the bar at the top */
-  top: 0;
-  z-index: 10;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar h2 {
+  font-family: "Cambridge";
+  font-size: 4rem;
+  letter-spacing: 2px;
+  color: var(--soft-gold);
+  margin: 0;
 }
 
 /* Search results container */
 .search-results-container {
-  
   width: 100%;
   display: flex;
   overflow-y: auto; /* Enables scrolling when items overflow */
   padding: 1rem;
 }
 
-.result-container{
+.result-container {
   margin: auto;
   padding: 2rem;
   height: 100vh;
@@ -57,6 +104,7 @@
   overflow: hidden;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Full-cover image inside card */
@@ -148,3 +196,5 @@
 .search-results-container::-webkit-scrollbar-track {
   background-color: var(--black);
 }
+
+
