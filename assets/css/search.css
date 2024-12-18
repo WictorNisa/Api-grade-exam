@@ -17,6 +17,43 @@ form {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  color: var(--soft-gold);
+  font-family: "playfair display";
+}
+
+.name-radio-button,
+.category-radio-button,
+.ingredient-radio-button,
+.glass-radio-button {
+  margin-right: 0.5rem;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+  color: var(--soft-gold);
+  font-family: "playfair display";
+  width: 30%;
+  margin: auto;
+}
+
+.pagination-container button {
+  font-family: "playfair display";
+  border: 1px solid var(--soft-gold);
+  border-radius: 5px;
+  background-color: var(--black);
+  color: var(--soft-gold);
+  font-size: 1.5rem;
+  padding: 0.1rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.pagination-container button:hover {
+  background-color: var(--gold-dark);
+  color: var(--black);
 }
 
 .search-btn {
@@ -196,5 +233,3 @@ form {
 .search-results-container::-webkit-scrollbar-track {
   background-color: var(--black);
 }
-
-

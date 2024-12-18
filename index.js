@@ -59,3 +59,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   displayFavourites(favouriteObjParsed);
 });
+
+
+
+
+// Things to do:

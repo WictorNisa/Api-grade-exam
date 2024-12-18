@@ -22,7 +22,7 @@
   object-fit: cover;
 }
 .favourite-active {
-  color: #ff0000;
+  color: var(--cream);
 }
 
 .favourite-container {

@@ -93,6 +93,13 @@ export const displayCocktailDetails = (cocktailId) => {
   const favouriteButton = detailsContainer.querySelector("#favourite-button");
   const favouriteIcon = document.querySelector("#favourite-icon");
   const closeButton = detailsContainer.querySelector(".close-details-btn");
+
+  let favouriteObj = localStorage.getItem("favouritesArr");
+  let favouriteArr = favouriteObj ? JSON.parse(favouriteObj) : [];
+  if (favouriteArr.some((fav) => fav.id === cocktailId.id)) {
+    favouriteIcon.classList.add("favourite-active");
+  }
+
   closeButton.addEventListener("click", () => {
     detailsContainer.style.display = "none";
   });
@@ -437,6 +444,9 @@ export const createPaginationControls = () => {
   nextButton.textContent = "Next";
   nextButton.disabled = state.currentPage === totalPages - 1;
 
+  const pageNumber = document.createElement("span");
+  pageNumber.textContent = `Page ${state.currentPage + 1} of ${totalPages}`;
+
   // Event Listeners
   prevButton.addEventListener("click", () => {
     if (state.currentPage > 0) {
@@ -455,5 +465,6 @@ export const createPaginationControls = () => {
   });
 
   paginationContainer.appendChild(prevButton);
+  paginationContainer.appendChild(pageNumber);
   paginationContainer.appendChild(nextButton);
 };
